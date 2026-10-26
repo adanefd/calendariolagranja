@@ -9,7 +9,7 @@ export default function RootLayout() {
     registerForPushNotificationsAsync();
   }, []);
   return (
-    <>
+    <GestureHandlerRootView style={{ flex: 1 }}>
       <Stack
         screenOptions={{
           headerStyle: { backgroundColor: '#F8F9FA' },
@@ -22,6 +22,6 @@ export default function RootLayout() {
         <Stack.Screen name="event/[id]" options={{ title: 'Detalle del Evento' }} />
       </Stack>
       <StatusBar style="dark" />
-    </>
+    </GestureHandlerRootView>
   );
 }
